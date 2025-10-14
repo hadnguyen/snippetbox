@@ -1,0 +1,29 @@
+# Binaries and build output
+/tmp/
+/tmp/main.exe
+*.exe
+*.out
+
+# Dependency directories
+/vendor/
+/bin/
+/obj/
+
+# IDE/editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Air/reload tool files
+.air.toml
+
+# Environment files
+.env
