@@ -7,7 +7,6 @@ import (
 	"log"
 	"net/http"
 	"os"
-	"strings"
 
 	_ "github.com/go-sql-driver/mysql"
 	"snippetbox.handev.uk/internal/models"
@@ -66,15 +65,4 @@ func openDB(dsn string) (*sql.DB, error) {
 		return nil, err
 	}
 	return db, nil
-}
-
-func neuter(next http.Handler) http.Handler {
-	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		if strings.HasSuffix(r.URL.Path, "/") {
-			http.NotFound(w, r)
-			return
-		}
-
-		next.ServeHTTP(w, r)
-	})
 }
