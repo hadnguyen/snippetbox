@@ -27,3 +27,15 @@ VALUES
 ('Over the wintry forest','Over the wintry\nforest, winds howl in rage\nwith no leaves','2025-10-08 10:51:05','2026-10-08 10:51:05'),
 ('First autumn morning','First autumn morning\nthe mirror I stare into\nshows my father','2025-10-08 10:51:08','2025-10-15 10:51:08'),
 ('O snail','O snail\nClimb Mount Fuji,\nBut slowly, slowly!','2025-10-09 09:41:58','2025-10-16 09:41:58');
+
+-- Create a `users` table.
+CREATE TABLE users ( 
+id INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT, 
+name VARCHAR(255) NOT NULL, 
+email VARCHAR(255) NOT NULL, 
+hashed_password CHAR(60) NOT NULL, 
+created DATETIME NOT NULL
+ ); 
+
+-- Add a unique constraint on the email column.
+ALTER TABLE users ADD CONSTRAINT users_uc_email UNIQUE (email);
