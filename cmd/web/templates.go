@@ -5,7 +5,7 @@ import (
 	"path/filepath"
 	"time"
 
-	"snippetbox.handev.uk/internal/models"
+	"github.com/hadnguyen/snippetbox/internal/models"
 )
 
 type templateData struct {
@@ -15,6 +15,7 @@ type templateData struct {
 	Form            any
 	Flash           string
 	IsAuthenticated bool
+	CSRFToken       string
 }
 
 func humanDate(t time.Time) string {

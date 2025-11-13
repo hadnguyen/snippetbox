@@ -13,7 +13,7 @@ import (
 	"github.com/alexedwards/scs/v2"
 	"github.com/go-playground/form/v4"
 	_ "github.com/go-sql-driver/mysql"
-	"snippetbox.handev.uk/internal/models"
+	"github.com/hadnguyen/snippetbox/internal/models"
 )
 
 type application struct {

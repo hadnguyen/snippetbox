@@ -6,9 +6,9 @@ import (
 	"net/http"
 	"strconv"
 
+	"github.com/hadnguyen/snippetbox/internal/models"
+	"github.com/hadnguyen/snippetbox/internal/validator"
 	"github.com/julienschmidt/httprouter"
-	"snippetbox.handev.uk/internal/models"
-	"snippetbox.handev.uk/internal/validator"
 )
 
 type snippetCreateForm struct {
