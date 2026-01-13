@@ -39,3 +39,11 @@ created DATETIME NOT NULL
 
 -- Add a unique constraint on the email column.
 ALTER TABLE users ADD CONSTRAINT users_uc_email UNIQUE (email);
+
+-- Test database setup and teardown
+--- Root user: root/rootpassword
+--- Test user: test_web/pass
+CREATE DATABASE test_snippetbox CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+CREATE USER 'test_web'@'localhost' IDENTIFIED BY 'pass';
+GRANT ALL PRIVILEGES ON test_snippetbox.* TO 'test_web'@'localhost';
+FLUSH PRIVILEGES;
