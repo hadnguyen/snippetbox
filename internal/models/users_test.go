@@ -8,9 +8,9 @@ import (
 
 func TestUserModelExists(t *testing.T) {
 	// go test -v -short ./...
-	// if testing.Short() {
-	// 	t.Skip("models: skipping integration test")
-	// }
+	if testing.Short() {
+		t.Skip("models: skipping integration test")
+	}
 
 	tests := []struct {
 		name   string
